@@ -1,0 +1,46 @@
+asset:
+  elevation: elevation_m
+  hub_height: Hub_height_m
+  asset_id: Wind_turbine_name
+  latitude: Latitude
+  longitude: Longitude
+  rated_power: Rated_power
+  rotor_diameter: Rotor_diameter_m
+curtail:
+  IAVL_DnWh: availability_kwh
+  IAVL_ExtPwrDnWh: curtailment_kwh
+  frequency: 10min
+  time: time
+latitude: 48.4497
+longitude: 5.5896
+capacity: 8.2
+meter:
+  MMTR_SupWh: net_energy_kwh
+  time: time
+reanalysis:
+  era5:
+    frequency: h
+    WMETR_EnvPres: surf_pres
+    WMETR_EnvTmp: t_2m
+    time: datetime
+    WMETR_HorWdSpdU: u_100
+    WMETR_HorWdSpdV: v_100
+    WMETR_HorWdDir: winddirection_deg
+  merra2:
+    frequency: h
+    WMETR_EnvPres: surface_pressure
+    WMETR_EnvTmp: temp_2m
+    time: datetime
+    WMETR_HorWdSpdU: u_50
+    WMETR_HorWdSpdV: v_50
+    WMETR_HorWdDir: winddirection_deg
+scada:
+  frequency: 10min
+  asset_id: Wind_turbine_name
+  WROT_BlPthAngVal: Ba_avg
+  WTUR_W: P_avg
+  WMET_EnvTmp: Ot_avg
+  time: Date_time
+  WMET_HorWdDir: Wa_avg
+  WMET_HorWdDirRel: Va_avg
+  WMET_HorWdSpd: Ws_avg

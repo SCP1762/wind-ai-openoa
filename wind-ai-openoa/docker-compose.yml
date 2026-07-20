@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: python scripts/check_project.py
+
+  jupyter:
+    build: .
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "8888:8888"
+    command: >-
+      jupyter lab --ip=0.0.0.0 --port=8888 --no-browser
+      --allow-root --ServerApp.token='' --ServerApp.password=''
